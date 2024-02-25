@@ -9,8 +9,10 @@ namespace ArtLibrary.ControlLogic
 
         public void Browse()
         {
-            FolderBrowserDialog DirDialog = new FolderBrowserDialog();
-            DirDialog.Description = "Выбор директории";
+            FolderBrowserDialog DirDialog = new FolderBrowserDialog
+            {
+                Description = "Выбор директории"
+            };
 
             if (DirDialog.ShowDialog() == DialogResult.OK)
                folderPath =  DirDialog.SelectedPath;

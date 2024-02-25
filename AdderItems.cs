@@ -19,7 +19,7 @@ namespace ArtLibrary.ControlLogic
             if (!comboBox.Items.Contains(comboBox.Text))
             {
                 comboBox.SelectedIndex = comboBox.Items.Add(comboBox.Text);
-                using (var stream = new StreamWriter($@"C:\Users\artem\source\repos\AdderInBD\UserData\{comboBox.Name}" , true))
+                using (var stream = new StreamWriter($@"C:\Users\artem\source\repos\AdderInBD\UserData\{comboBox.Name}.txt" , true))
                 {
                     stream.WriteLine(comboBox.Text);
                 }
